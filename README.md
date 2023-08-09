@@ -15,4 +15,4 @@ Omdena Price Prediction Model and Prediction
 
 ### Dataset:
 
-Dataset Link: - [https://archive.ics.uci.edu/ml/datasets/thyroid+disease](https://github.com/OmdenaAI/kitengela-kenya-predictive-rental/blob/main/src/tasks/task-3-data-exploration/cleaned_air_bnb_Jul_26.csv)https://github.com/OmdenaAI/kitengela-kenya-predictive-rental/blob/main/src/tasks/task-3-data-exploration/cleaned_air_bnb_Jul_26.csv
+Dataset Link: - (https://github.com/OmdenaAI/kitengela-kenya-predictive-rental/blob/main/src/tasks/task-3-data-exploration/cleaned_air_bnb_Jul_26.csv)https://github.com/OmdenaAI/kitengela-kenya-predictive-rental/blob/main/src/tasks/task-3-data-exploration/cleaned_air_bnb_Jul_26.csv
