@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Content here -->
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Welcome To Project - Omdena</h1>
+            </div>
+        </div>
+        <br />
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <form action="{{url_for('predict_datapoint')}}" method="POST">
+
+                    <div class="row">
+                        <label for="bathroomLabel" class="col-sm-2 col-form-label">bathroomLabel:</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="bathroomLabel" required name="bathroomLabel" class="form-control"
+                                placeholder="Enter value (int)"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+
+                        <label for="Private_entrance" class="col-sm-2 col-form-label">Private_entrance:</label>
+                        <div class="col-sm-2 form-group">
+                            <select id="Private_entrance" class="form-control" name="Private_entrance">
+                                <option value="0">YES</option>
+                                <option value="1">NO</option>
+                            </select>
+                        </div>
+
+                        <label for="numberOfBedsAvailable" class="col-sm-2 col-form-label">numberOfBedsAvailable:</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="numberOfBedsAvailable" required name="numberOfBedsAvailable"
+                                class="form-control" placeholder="Enter value (int)"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+
+
+                        <label for="numberOfBedrooms" class="col-sm-2 col-form-label">numberOfBedrooms:</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="numberOfBedrooms" required name="numberOfBedrooms"
+                                class="form-control" placeholder="Enter value (int)"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+                        
+                        <label for="roomType" class="col-sm-2 col-form-label">roomType:</label>
+                        <div class="col-sm-2 form-group">
+                            <select id="roomType" class="form-control" name="roomType">
+                                <option value="0">Private</option>
+                                <option value="1">Shared</option>
+                                <option value="2">Entire Home/Studio</option>
+                                <option value="3">Other</option>
+                            </select>
+                        </div>
+
+                        <label for="toddler_bed" class="col-sm-2 col-form-label">toddler_bed:</label>
+                        <div class="col-sm-2 form-group">
+                            <select id="toddler_bed" class="form-control" name="toddler_bed">
+                                <option value="0">No</option>
+                                <option value="1">Only 1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                      
+                        
+                        
+                        <label for="crib" class="col-sm-2 col-form-label">crib:</label>
+                        <div class="col-sm-2 form-group">
+                            <select id="crib" class="form-control" name="crib">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+
+                        <label for="hammock" class="col-sm-2 col-form-label">hammock:</label>
+                        <div class="col-sm-2 form-group">
+                            <select id="hammock" class="form-control" name="hammock">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <label for="water_bed" class="col-sm-2 col-form-label">water_bed:</label>
+                        <div class="col-sm-2 form-group">
+                            <select id="water_bed" class="form-control" name="water_bed">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+
+                        <label for="allowsChildren" class="col-sm-2 col-form-label">allowsChildren:</label>
+                        <div class="col-sm-2 form-group">
+                            <select id="allowsChildren" class="form-control" name="allowsChildren">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+
+                        <label for="allowsEvents" class="col-sm-2 col-form-label">allowsEvents:</label>
+                        <div class="col-sm-2 form-group">
+                            <select id="allowsEvents" class="form-control" name="allowsEvents">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+
+                        <label for="allowsPets" class="col-sm-2 col-form-label">allowsPets:</label>
+                        <div class="col-sm-2 form-group">
+                            <select id="allowsPets" class="form-control" name="allowsPets">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+
+                        <label for="allowsSmoking" class="col-sm-2 col-form-label">allowsSmoking:</label>
+                        <div class="col-sm-2 form-group">
+                            <select id="allowsSmoking" class="form-control" name="allowsSmoking">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <label for="allowsInfants" class="col-sm-2 col-form-label">allowsInfants:</label>
+                        <div class="col-sm-2 form-group">
+                            <select id="allowsInfants" class="form-control" name="allowsInfants">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        
+                        <label for="personCapacity" class="col-sm-2 col-form-label">personCapacity (1 to 20):</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="personCapacity" required name="personCapacity" class="form-control"
+                                placeholder="Enter value (int)"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+                        
+                        <label for="Accuracy" class="col-sm-2 col-form-label">Accuracy (1 to 5):</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="Accuracy" required name="Accuracy" class="form-control"
+                                placeholder="Enter value (float)"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+
+                        <label for="Check_in" class="col-sm-2 col-form-label">Check_in (1 to 5):</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="Check_in" required name="Check_in" class="form-control"
+                                placeholder="Enter value (float)"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+
+                        <label for="Cleanliness" class="col-sm-2 col-form-label">Cleanliness (1 to 5):</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="Cleanliness" required name="Cleanliness" class="form-control"
+                                placeholder="Enter value (float)"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+
+                        <label for="Communication" class="col-sm-2 col-form-label">Communication (1 to 5):</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="Communication" required name="Communication" class="form-control"
+                                placeholder="Enter value (float)"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+
+                        <label for="Location" class="col-sm-2 col-form-label">Location (1 to 5):</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="Location" required name="Location" class="form-control"
+                                placeholder="Enter value (float)"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+
+                        <label for="Review_Count" class="col-sm-2 col-form-label">Review_Count:</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="Review_Count" required name="Review_Count" class="form-control"
+                                placeholder="Enter value (float)"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+
+                        <label for="Value" class="col-sm-2 col-form-label">Value (1 to 5):</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="Value" required name="Value" class="form-control"
+                                placeholder="Enter value (float)"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+
+                        <label for="amenities" class="col-sm-2 col-form-label">amenities:</label>
+                        <div class="col-sm-2 form-group">
+                            <select id="amenities" class="form-control" name="amenities">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                        <label for="bed_type" class="col-sm-2 col-form-label">bed_type (1 to 50):</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="bed_type" required name="bed_type" class="form-control"
+                                placeholder="Enter value (int)"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+
+
+                        <!-- 
+                            <label for="age" class="col-sm-2 col-form-label">Private_entrance:</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="Private_entrance" required name="Private_entrance" class="form-control"
+                                placeholder="Enter value (int)"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+
+                            <label for="home" class="col-sm-2 col-form-label">home:</label>
+                        <div class="col-sm-2 form-group">
+                            <select id="home" class="form-control" name="home">
+                                <option value="0">YES</option>
+                                <option value="1">NO</option>
+                            </select>
+                        </div> -->
+
+                        <div class="col-sm-4 form-group">
+                            <input type="submit" class="btn btn-primary" value="Submit">
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
