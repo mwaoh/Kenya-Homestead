@@ -24,17 +24,14 @@ class DataTransformation:
 
     def get_data_transformation_object(self):
         try:
-            logging.info('Data Transformation initiated')
             # Define which columns should be ordinal-encoded and which should be scaled
             categorical_cols = ['city', 'state']
-            logging.info('Data Transformation initiated2')
             numerical_cols = ['bathroomLabel', 'Private_entrance', 'numberOfBedsAvailable','numberOfBedrooms', 'toddler_bed', 'crib', 'hammock', 'water_bed','allowsChildren', 'allowsEvents', 'allowsPets', 'allowsSmoking','allowsInfants', 'personCapacity', 'Accuracy', 'Check_in','Cleanliness', 'Communication', 'Location', 'Review_Count', 'Value','roomType', 'amenities', 'bed_type']
             logging.info('Data Transformation initiated2')
             # Define the custom ranking for each ordinal variable
-            city_categories = ['A', 'B', 'C','D','E']
-            state_categories = ['D', 'E', 'F', 'G', 'H', 'I', 'J']
+            state_categories = ['Baringo','Bomet','Bungoma','Busia','Elgeyo','Mara','Embu','Garissa','Homa Bay','Isiolo','Kajiado','Kakamega','Kericho','Kiambu','Kilifi','Kirinyaga','Kisii','Kisumu','Kitui','Kwale','Laikipia','Lamu','Machakos','Makueni','Mandera','Marsabit','Meru','Migori','Mombasa','Muranga','Nairobi','Nakuru','Nandi','Narok','Nyamira','Nyandarua','Nyeri','Samburu','Siaya','Taveta','Tana','Tharaka-Nithi','Trans-Nzoia','Turkana','Uasin Gishu','Vihiga','Wajir','West Pokot']
+            city_categories = ['Baragoi','Bondo','Bungoma','Busia','Butere','Dadaab','Diani Beach','Eldoret','Emali','Embu','Garissa','Gede','Gem','Hola','Homa Bay','Isiolo','Kitui','Kibwezi','Kajiado','Kakamega','Kakuma','Kapenguria','Kericho','Keroka','Kiambu','Kilifi','Kisii','Kisumu','Kitale','Lamu','Langata','Litein','Lodwar','Lokichoggio','Londiani','Loyangalani','Machakos','Makindu','Malindi','Mandera','Maralal','Marsabit','Meru','Mombasa','Moyale','Mtwapa','Mumias','Muranga','Mutomo','Nairobi','Naivasha','Nakuru','Namanga','Nanyuki','Naro Moru','Narok','Nyahururu','Nyeri','Ruiru','Siaya','Shimoni','Takaungu','Thika','Ugunja','Vihiga','Voi','Wajir','Watamu','Webuye','Wote','Wundanyi']
 
-            
             logging.info('Pipeline Initiated')
 
             ## Numerical Pipeline
@@ -47,17 +44,17 @@ class DataTransformation:
 
             # Categorigal Pipeline
 
-            #cat_pipeline=Pipeline(
-            #    steps=[
-            #    ('imputer',SimpleImputer(strategy='most_frequent')),
-            #    ('ordinalencoder',OrdinalEncoder(categories=[cut_categories,color_categories,clarity_categories])),
-            #    ('scaler',StandardScaler())
-            #    ]
-            #)
+            cat_pipeline=Pipeline(
+                steps=[
+                ('imputer',SimpleImputer(strategy='most_frequent')),
+                ('ordinalencoder',OrdinalEncoder(categories=[city_categories,state_categories])),
+                ('scaler',StandardScaler())
+                ]
+            )
 
             preprocessor=ColumnTransformer([
             ('num_pipeline',num_pipeline,numerical_cols),
-            #('cat_pipeline',cat_pipeline,categorical_cols)
+            ('cat_pipeline',cat_pipeline,categorical_cols)
             ])
             
             return preprocessor

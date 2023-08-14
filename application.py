@@ -18,6 +18,8 @@ def predict_datapoint():
     
     else:
         data=CustomData(
+            state=str(request.form.get('state')),
+            city = str(request.form.get('city')),
             bathroomLabel=float(request.form.get('bathroomLabel')),
             Private_entrance = float(request.form.get('Private_entrance')),
             numberOfBedsAvailable = float(request.form.get('numberOfBedsAvailable')),
@@ -35,8 +37,6 @@ def predict_datapoint():
             allowsInfants = float(request.form.get('allowsInfants')),
             personCapacity = float(request.form.get('personCapacity')),
 
-            
-
             Accuracy = float(request.form.get('Accuracy')),
             Check_in = float(request.form.get('Check_in')),
             Cleanliness = float(request.form.get('Cleanliness')),
@@ -46,8 +46,8 @@ def predict_datapoint():
             Value = float(request.form.get('Value')),
             amenities = float(request.form.get('amenities')),
             bed_type = float(request.form.get('bed_type'))
-           
         )
+        
         final_new_data=data.get_data_as_dataframe()
         predict_pipeline=PredictPipeline()
         pred=predict_pipeline.predict(final_new_data)

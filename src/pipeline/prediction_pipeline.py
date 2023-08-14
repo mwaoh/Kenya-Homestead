@@ -31,6 +31,8 @@ class PredictPipeline:
         
 class CustomData:
     def __init__(self,
+                 state:str,
+                 city:str,
                  bathroomLabel:float,
                  Private_entrance:float,
                  numberOfBedsAvailable:float,                
@@ -56,7 +58,8 @@ class CustomData:
                  amenities:float,
                  bed_type:float):
         
-            
+        self.state=state
+        self.city=city  
         self.bathroomLabel=bathroomLabel
         self.Private_entrance=Private_entrance
         self.numberOfBedsAvailable=numberOfBedsAvailable        
@@ -74,7 +77,6 @@ class CustomData:
         self.personCapacity = personCapacity
         self.Accuracy = Accuracy
         self.Check_in = Check_in
-
         self.Cleanliness = Cleanliness
         self.Communication = Communication
         self.Location = Location
@@ -83,10 +85,11 @@ class CustomData:
         self.amenities = amenities
         self.bed_type = bed_type
 
-
     def get_data_as_dataframe(self):
         try:
             custom_data_input_dict = {
+                'state':[self.state],
+                'city':[self.city],
                 'bathroomLabel':[self.bathroomLabel],
                 'Private_entrance':[self.Private_entrance],
                 'numberOfBedsAvailable':[self.numberOfBedsAvailable],               
