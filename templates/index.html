@@ -27,68 +27,514 @@
         <div class="row">
             <div class="col-sm-12">
                 <form action="{{url_for('predict_datapoint')}}" method="POST">
-                    
 
 
                     <div class="row">
                         <label for="state" class="col-sm-2 col-form-label">State:</label>
                         <div class="col-sm-2 form-group">
                             <select id="state" class="form-control" name="state">
-                                <option value='Baringo'>Baringo</option>
-    <option value='Bomet'>Bomet</option>
-    <option value='Bungoma'>Bungoma</option>
-    <option value='Busia'>Busia</option>
-    <option value='Elgeyo-Marakwet'>Elgeyo-Marakwet</option>
-    <option value='Embu'>Embu</option>
-    <option value='Garissa'>Garissa</option>
-    <option value='Homa Bay'>Homa Bay</option>
-    <option value='Isiolo'>Isiolo</option>
-    <option value='Kajiado'>Kajiado</option>
-    <option value='Kakamega'>Kakamega</option>
-    <option value='Kericho'>Kericho</option>
-    <option value='Kiambu'>Kiambu</option>
-    <option value='Kilifi'>Kilifi</option>
-    <option value='Kirinyaga'>Kirinyaga</option>
-    <option value='Kisii'>Kisii</option>
-    <option value='Kisumu'>Kisumu</option>
-    <option value='Kitui'>Kitui</option>
-    <option value='Kwale'>Kwale</option>
-    <option value='Laikipia'>Laikipia</option>
-    <option value='Lamu'>Lamu</option>
-    <option value='Machakos'>Machakos</option>
-    <option value='Makueni'>Makueni</option>
-    <option value='Mandera'>Mandera</option>
-    <option value='Marsabit'>Marsabit</option>
-    <option value='Meru'>Meru</option>
-    <option value='Migori'>Migori</option>
-    <option value='Mombasa'>Mombasa</option>
-    <option value='Muranga'>Muranga</option>
-    <option value='Nairobi'>Nairobi</option>
-    <option value='Nakuru'>Nakuru</option>
-    <option value='Nandi'>Nandi</option>
-    <option value='Narok'>Narok</option>
-    <option value='Nyamira'>Nyamira</option>
-    <option value='Nyandarua'>Nyandarua</option>
-    <option value='Nyeri'>Nyeri</option>
-    <option value='Samburu'>Samburu</option>
-    <option value='Siaya'>Siaya</option>
-    <option value='Taveta'>Taveta</option>
-    <option value='Tana'>Tana</option>
-    <option value='Tharaka-Nithi'>Tharaka-Nithi</option>
-    <option value='Trans-Nzoia'>Trans-Nzoia</option>
-    <option value='Turkana'>Turkana</option>
-    <option value='Uasin Gishu'>Uasin Gishu</option>
-    <option value='Vihiga'>Vihiga</option>
-    <option value='Wajir'>Wajir</option>
-    <option value='West Pokot'>West Pokot</option>
-    
+                                <option value='Nairobi County'> Nairobi County</option>
+                                <option value='Wilaya ya Kajiado'> Wilaya ya Kajiado</option>
+                                <option value='Kajiado County'> Kajiado County</option>
+                                <option value='Kiambu County'> Kiambu County</option>
+                                <option value='Nairobi'> Nairobi</option>
+                                <option value='Machakos County'> Machakos County</option>
+                                <option value='Eastern'> Eastern</option>
+                                <option value='Central'> Central</option>
+                                <option value='Rift Valley'> Rift Valley</option>
+                                <option value='Kenya'> Kenya</option>
+                                <option value='Nairobi'> Nairobi</option>
+                                <option value='Narok County'> Narok County</option>
+                                <option value='Bomet County'> Bomet County</option>
+                                <option value='Kisii County'> Kisii County</option>
+                                <option value='Nakuru County'> Nakuru County</option>
+                                <option value='Homa Bay County'> Homa Bay County</option>
+                                <option value='Wilaya ya Narok'> Wilaya ya Narok</option>
+                                <option value='Nyamira County'> Nyamira County</option>
+                                <option value='Kericho County'> Kericho County</option>
+                                <option value='Wilaya ya Kisii Kati'> Wilaya ya Kisii Kati</option>
+                                <option value='Wilaya ya Nakuru'> Wilaya ya Nakuru</option>
+                                <option value='Narok'> Narok</option>
+                                <option value='Nakuru'> Nakuru</option>
+                                <option value='Nyanza'> Nyanza</option>
+                                <option value='Laikipia County'> Laikipia County</option>
+                                <option value='Meru County'> Meru County</option>
+                                <option value='Nyeri County'> Nyeri County</option>
+                                <option value='Wilaya ya Isiolo'> Wilaya ya Isiolo</option>
+                                <option value='Samburu County'> Samburu County</option>
+                                <option value='Wilaya ya Laikipia'> Wilaya ya Laikipia</option>
+                                <option value='Laikipia'> Laikipia</option>
+                                <option value='Kirinyaga'> Kirinyaga</option>
+                                <option value='Nyeri'> Nyeri</option>
+                                <option value='Meru'> Meru</option>
+                                <option value='Uasin Gishu County'> Uasin Gishu County</option>
+                                <option value='Elgeyo-Marakwet County'> Elgeyo-Marakwet County</option>
+                                <option value='Wilaya ya Uasin Gishu'> Wilaya ya Uasin Gishu</option>
+                                <option value='Naivasha'> Naivasha</option>
+                                <option value='Nyahururu'> Nyahururu</option>
+                                <option value='Kenya'> Kenya</option>
+                                <option value='Nakuru '> Nakuru </option>
+                                <option value='Nyandarua County'> Nyandarua County</option>
+                                <option value='Taita-Taveta County'> Taita-Taveta County</option>
+                                <option value='Kilimanjaro Region'> Kilimanjaro Region</option>
+                                <option value='Coast'> Coast</option>
+                                <option value='Mombasa County'> Mombasa County</option>
+                                <option value='Kwale'> Kwale</option>
+                                <option value='Kwale County'> Kwale County</option>
+                                <option value='Wilaya ya Kwale'> Wilaya ya Kwale</option>
+                                <option value='Ukunda'> Ukunda</option>
+                                <option value='Kwale County'> Kwale County</option>
+                                <option value='Kilifi County'> Kilifi County</option>
+                                <option value='Kwale District'> Kwale District</option>
+                                <option value='Mombasa'> Mombasa</option>
+                                <option value='kenya'> kenya</option>
+                                <option value='Wilaya ya Mombasa'> Wilaya ya Mombasa</option>
+                                <option value='coast'> coast</option>
+                                <option value='Kwale '> Kwale </option>
+                                <option value='Diani'> Diani</option>
+                                <option value='Kisumu County'> Kisumu County</option>
+                                <option value='Kakamega County'> Kakamega County</option>
+                                <option value='Annex'> Annex</option>
+                                <option value='Kisumu'> Kisumu</option>
+                                <option value='Kakamega'> Kakamega</option>
+                                <option value='Nandi County'> Nandi County</option>
+                                <option value='Rift Valley'> Rift Valley</option>
+                                <option value='Wilaya ya Kisumu'> Wilaya ya Kisumu</option>
+                                <option value='Vihiga County'> Vihiga County</option>
+                                <option value='Elgeyo Marakwet'> Elgeyo Marakwet</option>
+                                <option value='Trans-Nzoia County'> Trans-Nzoia County</option>
+                                <option value='Uasin-Gishu'> Uasin-Gishu</option>
+                                <option value='Tharaka-Nithi County'> Tharaka-Nithi County</option>
+                                <option value='Embu County'> Embu County</option>
+                                <option value='Makueni County'> Makueni County</option>
+                                <option value='Kitui County'> Kitui County</option>
+                                <option value='Wilaya ya Makueni'> Wilaya ya Makueni</option>
+                                <option value='Wilaya ya Kakamega'> Wilaya ya Kakamega</option>
+                                <option value='Wilaya ya Vihiga'> Wilaya ya Vihiga</option>
+                                <option value='Kilifi'> Kilifi</option>
+                                <option value='Wilaya ya Kilifi'> Wilaya ya Kilifi</option>
+                                <option value='Root Node'> Root Node</option>
+                                <option value='Galu Beach'> Galu Beach</option>
+                                <option value='South coast'> South coast</option>
+                                <option value='Nyali'> Nyali</option>
+                                <option value='Mtwapa'> Mtwapa</option>
+                                <option value='Nyali estate'> Nyali estate</option>
+                                <option value='Westlands'> Westlands</option>
+                                <option value='Nairobi'> Nairobi</option>
+                                <option value='Kaijado County'> Kaijado County</option>
+                                <option value='Kajiado'> Kajiado</option>
+                                <option value='Langata'> Langata</option>
+                                <option value='Kiambu'> Kiambu</option>
+                                <option value='Westlands'> Westlands</option>
+                                <option value='Nairobi Area'> Nairobi Area</option>
+                                <option value='Kikuyu'> Kikuyu</option>
+                                <option value='Nyamira'> Nyamira</option>
+                                <option value='Wilaya ya Kiambu'> Wilaya ya Kiambu</option>
+                                <option value='Kajiado North County'> Kajiado North County</option>
+                                <option value='Kileleshwa'> Kileleshwa</option>
+                                <option value='West Pokot County'> West Pokot County</option>
+                                <option value='Turkana County'> Turkana County</option>
+                                <option value='Isiolo County'> Isiolo County</option>
+                                <option value='Kirinyaga County'> Kirinyaga County</option>
+                                <option value='Kaunti ya Meru'> Kaunti ya Meru</option>
+                                <option value='Eastern Region'> Eastern Region</option>
+                                <option value='Machakos'> Machakos</option>
+                                <option value='Muranga County'> Muranga County</option>
+                                <option value='Kenia'> Kenia</option>
+                                <option value='Kisaju'> Kisaju</option>
+                                <option value='Nyali estate'> Nyali estate</option>
+                                <option value='Homa Bay'> Homa Bay</option>
+                                <option value='Migori County'> Migori County</option>
+                                <option value='Bungoma County'> Bungoma County</option>
+                                <option value='Busia County'> Busia County</option>
+                                <option value='Siaya'> Siaya</option>
+                                <option value='Bungoma'> Bungoma</option>
+                                <option value='western kenya'> western kenya</option>
+                                <option value='Mara Region'> Mara Region</option>
+                                <option value='Kendu bay'> Kendu bay</option>
+                                <option value='Texas'> Texas</option>
+                                <option value='Nairobi City'> Nairobi City</option>
+                                <option value='Nairobi'> Nairobi</option>
+                                <option value='Kenya'> Kenya</option>
+                                <option value='Wanyee Cl'> Wanyee Cl</option>
+                                <option value='Nairobi'> Nairobi</option>
+                                <option value='Kenya'> Kenya</option>
+                                <option value='Ruaka'> Ruaka</option>
+                                <option value='South B'> South B</option>
+                                <option value='Nairobi-Upper hill Area'> Nairobi-Upper hill Area</option>
+                                <option value='Wilaya ya Machakos'> Wilaya ya Machakos</option>
+                                <option value='Embakasi East'> Embakasi East</option>
+                                <option value='Nairobi '> Nairobi </option>
+                                <option value='NAIROBI'> NAIROBI</option>
+                                <option value='Coast Province'> Coast Province</option>
+                                <option value='Malindi'> Malindi</option>
+                                <option value='Provincia costiera'> Provincia costiera</option>
+                                <option value='kilifi'> kilifi</option>
+                                <option value='Distretto di Kilifi'> Distretto di Kilifi</option>
+                                <option value='KF'> KF</option>
+                                <option value='Watamu'> Watamu</option>
+                                <option value='Kilifi Province'> Kilifi Province</option>
+                                <option value='Kilifi'> Kilifi</option>
+                                <option value='Watamu'> Watamu</option>
+
+                                <!-- <option value='Baringo'>Baringo</option>
+                                <option value='Bomet'>Bomet</option>
+                                <option value='Bungoma'>Bungoma</option>
+                                <option value='Busia'>Busia</option>
+                                <option value='Elgeyo-Marakwet'>Elgeyo-Marakwet</option>
+                                <option value='Embu'>Embu</option>
+                                <option value='Garissa'>Garissa</option>
+                                <option value='Homa Bay'>Homa Bay</option>
+                                <option value='Isiolo'>Isiolo</option>
+                                <option value='Kajiado'>Kajiado</option>
+                                <option value='Kakamega'>Kakamega</option>
+                                <option value='Kericho'>Kericho</option>
+                                <option value='Kiambu'>Kiambu</option>
+                                <option value='Kilifi'>Kilifi</option>
+                                <option value='Kirinyaga'>Kirinyaga</option>
+                                <option value='Kisii'>Kisii</option>
+                                <option value='Kisumu'>Kisumu</option>
+                                <option value='Kitui'>Kitui</option>
+                                <option value='Kwale'>Kwale</option>
+                                <option value='Laikipia'>Laikipia</option>
+                                <option value='Lamu'>Lamu</option>
+                                <option value='Machakos'>Machakos</option>
+                                <option value='Makueni'>Makueni</option>
+                                <option value='Mandera'>Mandera</option>
+                                <option value='Marsabit'>Marsabit</option>
+                                <option value='Meru'>Meru</option>
+                                <option value='Migori'>Migori</option>
+                                <option value='Mombasa'>Mombasa</option>
+                                <option value='Muranga'>Muranga</option>
+                                <option value='Nairobi'>Nairobi</option>
+                                <option value='Nakuru'>Nakuru</option>
+                                <option value='Nandi'>Nandi</option>
+                                <option value='Narok'>Narok</option>
+                                <option value='Nyamira'>Nyamira</option>
+                                <option value='Nyandarua'>Nyandarua</option>
+                                <option value='Nyeri'>Nyeri</option>
+                                <option value='Samburu'>Samburu</option>
+                                <option value='Siaya'>Siaya</option>
+                                <option value='Taveta'>Taveta</option>
+                                <option value='Tana'>Tana</option>
+                                <option value='Tharaka-Nithi'>Tharaka-Nithi</option>
+                                <option value='Trans-Nzoia'>Trans-Nzoia</option>
+                                <option value='Turkana'>Turkana</option>
+                                <option value='Uasin Gishu'>Uasin Gishu</option>
+                                <option value='Vihiga'>Vihiga</option>
+                                <option value='Wajir'>Wajir</option>
+                                <option value='West Pokot'>West Pokot</option> -->
                             </select>
                         </div>
-    
+
                         <label for="city" class="col-sm-2 col-form-label">City:</label>
-                            <div class="col-sm-2 form-group">
-                                <select id="city" class="form-control" name="city">
-                                    <option value='Baragoi'>Baragoi</option>
+                        <div class="col-sm-2 form-group">
+                            <select id="city" class="form-control" name="city">
+                                <option value='Ngong'> Ngong</option>
+                                <option value='Nairobi'> Nairobi</option>
+                                <option value='Ruaka'> Ruaka</option>
+                                <option value='Pridelands'> Pridelands</option>
+                                <option value='Nairobi City'> Nairobi City</option>
+                                <option value='Kenya'> Kenya</option>
+                                <option value='Ongata Rongai'> Ongata Rongai</option>
+                                <option value='Kiambu'> Kiambu</option>
+                                <option value='Athi River'> Athi River</option>
+                                <option value='Ruiru'> Ruiru</option>
+                                <option value='Nairobi City'> Nairobi City</option>
+                                <option value='Muthaiga North'> Muthaiga North</option>
+                                <option value='Kiambu District'> Kiambu District</option>
+                                <option value='Kitengela'> Kitengela</option>
+                                <option value='Kiserian'> Kiserian</option>
+                                <option value='South'> South</option>
+                                <option value='New Njiru Town'> New Njiru Town</option>
+                                <option value='Nairobi - Lavington'> Nairobi - Lavington</option>
+                                <option value='North'> North</option>
+                                <option value='Limuru road'> Limuru road</option>
+                                <option value='Mlolongo'> Mlolongo</option>
+                                <option value='Westlands'> Westlands</option>
+                                <option value='Kajiado'> Kajiado</option>
+                                <option value='Seganani Masai Mara national reserve'> Seganani Masai Mara national reserve</option>
+                                <option value='Bomet'> Bomet</option>
+                                <option value='Narok'> Narok</option>
+                                <option value='Highway'> Highway</option>
+                                <option value='Entasekera'> Entasekera</option>
+                                <option value='Nakuru'> Nakuru</option>
+                                <option value='Kadongo'> Kadongo</option>
+                                <option value='Mau Narok'> Mau Narok</option>
+                                <option value='Lake Elmenteita'> Lake Elmenteita</option>
+                                <option value='Ikonge'> Ikonge</option>
+                                <option value='Litein'> Litein</option>
+                                <option value='Naivasha '> Naivasha </option>
+                                <option value='Keroka'> Keroka</option>
+                                <option value='Ololaimutiek Village'> Ololaimutiek Village</option>
+                                <option value='Naivasha'> Naivasha</option>
+                                <option value='Kongoni'> Kongoni</option>
+                                <option value='Gilgil'> Gilgil</option>
+                                <option value='Kisii'> Kisii</option>
+                                <option value='Talek'> Talek</option>
+                                <option value='Nyanchwa Hill'> Nyanchwa Hill</option>
+                                <option value='Narok County'> Narok County</option>
+                                <option value='Aitong'> Aitong</option>
+                                <option value='Lolgorien'> Lolgorien</option>
+                                <option value='Maasai Mara'> Maasai Mara</option>
+                                <option value='Oyugis'> Oyugis</option>
+                                <option value='Sekenani'> Sekenani</option>
+                                <option value='Masai Mara'> Masai Mara</option>
+                                <option value='Ewaso Ngiro'> Ewaso Ngiro</option>
+                                <option value='SEKENANI'> SEKENANI</option>
+                                <option value='Silibwet'> Silibwet</option>
+                                <option value='Nanyuki'> Nanyuki</option>
+                                <option value='Nchiru'> Nchiru</option>
+                                <option value='Isiolo'> Isiolo</option>
+                                <option value='Dol Dol'> Dol Dol</option>
+                                <option value='Wamba'> Wamba</option>
+                                <option value='Meru'> Meru</option>
+                                <option value='Rukanga'> Rukanga</option>
+                                <option value='Sagana'> Sagana</option>
+                                <option value='East'> East</option>
+                                <option value='Meru District'> Meru District</option>
+                                <option value='Timau'> Timau</option>
+                                <option value='Maua'> Maua</option>
+                                <option value='Eldoret'> Eldoret</option>
+                                <option value='Iten'> Iten</option>
+                                <option value='Elmenteita'> Elmenteita</option>
+                                <option value='Lake Naivasha'> Lake Naivasha</option>
+                                <option value='Njoro'> Njoro</option>
+                                <option value='Eburru'> Eburru</option>
+                                <option value='Kasuku'> Kasuku</option>
+                                <option value='Nakuru town'> Nakuru town</option>
+                                <option value='Voi'> Voi</option>
+                                <option value='Mwatate'> Mwatate</option>
+                                <option value='Taveta'> Taveta</option>
+                                <option value='Maungu'> Maungu</option>
+                                <option value='Wundanyi'> Wundanyi</option>
+                                <option value='Same'> Same</option>
+                                <option value='Mombasa'> Mombasa</option>
+                                <option value='Diani Beach'> Diani Beach</option>
+                                <option value='Mtwapa'> Mtwapa</option>
+                                <option value='Tiwi'> Tiwi</option>
+                                <option value='DIANI BEACH'> DIANI BEACH</option>
+                                <option value='Kwale'> Kwale</option>
+                                <option value='Ukunda'> Ukunda</option>
+                                <option value='Nyali Beach'> Nyali Beach</option>
+                                <option value='Tiwi Beach'> Tiwi Beach</option>
+                                <option value='Galu Beach'> Galu Beach</option>
+                                <option value='Nyali Mombasa'> Nyali Mombasa</option>
+                                <option value='Nyali'> Nyali</option>
+                                <option value='Diani Beach '> Diani Beach </option>
+                                <option value='Diani'> Diani</option>
+                                <option value='Diani Beach Road'> Diani Beach Road</option>
+                                <option value='Kisumu'> Kisumu</option>
+                                <option value='Isukha ICHINA'> Isukha ICHINA</option>
+                                <option value='Kakamega'> Kakamega</option>
+                                <option value='Milimani'> Milimani</option>
+                                <option value='Kapsabet'> Kapsabet</option>
+                                <option value='Kisumu City'> Kisumu City</option>
+                                <option value='Gisambai'> Gisambai</option>
+                                <option value='Kapseret'> Kapseret</option>
+                                <option value='Kitale'> Kitale</option>
+                                <option value='Vihiga'> Vihiga</option>
+                                <option value='Soy'> Soy</option>
+                                <option value='Malava'> Malava</option>
+                                <option value='Naro Moru'> Naro Moru</option>
+                                <option value='Nanyuki'> Nanyuki</option>
+                                <option value='Naro Moru'> Naro Moru</option>
+                                <option value='Ol Kalou'> Ol Kalou</option>
+                                <option value='Rumuruti'> Rumuruti</option>
+                                <option value='Nanyuki '> Nanyuki </option>
+                                <option value='Nyahururu'> Nyahururu</option>
+                                <option value='Laikipia'> Laikipia</option>
+                                <option value='Chuka'> Chuka</option>
+                                <option value='Gatunga'> Gatunga</option>
+                                <option value='Siakago'> Siakago</option>
+                                <option value='Chogoria'> Chogoria</option>
+                                <option value='Igoji'> Igoji</option>
+                                <option value='Machakos'> Machakos</option>
+                                <option value='ndagani'> ndagani</option>
+                                <option value='Matuu'> Matuu</option>
+                                <option value='Wote'> Wote</option>
+                                <option value='Karurumo'> Karurumo</option>
+                                <option value='Matinyani'> Matinyani</option>
+                                <option value='Mutomo'> Mutomo</option>
+                                <option value='Kitui'> Kitui</option>
+                                <option value='Mtito Andei'> Mtito Andei</option>
+                                <option value='Syongila'> Syongila</option>
+                                <option value='Kibwezi'> Kibwezi</option>
+                                <option value='Luanda'> Luanda</option>
+                                <option value='Chavakali'> Chavakali</option>
+                                <option value='Maragoli'> Maragoli</option>
+                                <option value='Kilifi'> Kilifi</option>
+                                <option value='Malindi'> Malindi</option>
+                                <option value='Kikambala'> Kikambala</option>
+                                <option value='Mtwapa'> Mtwapa</option>
+                                <option value='Mombasa'> Mombasa</option>
+                                <option value='Kaloleni'> Kaloleni</option>
+                                <option value='Mida Creek'> Mida Creek</option>
+                                <option value='Gede'> Gede</option>
+                                <option value='Watamu'> Watamu</option>
+                                <option value='Malindi - Mambrui'> Malindi - Mambrui</option>
+                                <option value='Gongoni'> Gongoni</option>
+                                <option value='Mtwapa Creek'> Mtwapa Creek</option>
+                                <option value='Mariakani'> Mariakani</option>
+                                <option value='Msambweni'> Msambweni</option>
+                                <option value='Mambrui'> Mambrui</option>
+                                <option value='Utange-Mombasa '> Utange-Mombasa </option>
+                                <option value='Waa'> Waa</option>
+                                <option value='Mombasa Bamburi Beach'> Mombasa Bamburi Beach</option>
+                                <option value='Bamburi'> Bamburi</option>
+                                <option value='Off Diani Beach Road'> Off Diani Beach Road</option>
+                                <option value='Diane'> Diane</option>
+                                <option value='Galu Kinondo Beach'> Galu Kinondo Beach</option>
+                                <option value='Shimoni'> Shimoni</option>
+                                <option value='Wasini Island'> Wasini Island</option>
+                                <option value='Mombasa '> Mombasa </option>
+                                <option value='Mombasa Kenya'> Mombasa Kenya</option>
+                                <option value='Box 42961-80100'> Box 42961-80100</option>
+                                <option value='Kikuyu'> Kikuyu</option>
+                                <option value='Limuru'> Limuru</option>
+                                <option value='Kaijado'> Kaijado</option>
+                                <option value='Tigoni'> Tigoni</option>
+                                <option value='Juja'> Juja</option>
+                                <option value='Olooloitikosh'> Olooloitikosh</option>
+                                <option value='Tigoni Dam'> Tigoni Dam</option>
+                                <option value='Kiserian'> Kiserian</option>
+                                <option value='Rift Valley'> Rift Valley</option>
+                                <option value='KE'> KE</option>
+                                <option value='Karen Nairobi'> Karen Nairobi</option>
+                                <option value='Karen'> Karen</option>
+                                <option value=' Mombasa Road'> Mombasa Road</option>
+                                <option value='Githurai'> Githurai</option>
+                                <option value='Ngong Hills'> Ngong Hills</option>
+                                <option value='Karen/Hardy'> Karen/Hardy</option>
+                                <option value='Embakasi'> Embakasi</option>
+                                <option value='Ngenda'> Ngenda</option>
+                                <option value='Magadi'> Magadi</option>
+                                <option value='Limuru Town'> Limuru Town</option>
+                                <option value='Thika'> Thika</option>
+                                <option value='Ndenderu'> Ndenderu</option>
+                                <option value='Ruaka Town'> Ruaka Town</option>
+                                <option value='Kahawa Sukari'> Kahawa Sukari</option>
+                                <option value='Underpass'> Underpass</option>
+                                <option value='Rironi'> Rironi</option>
+                                <option value='Banana Hill'> Banana Hill</option>
+                                <option value='Nyamira'> Nyamira</option>
+                                <option value='Tatu City'> Tatu City</option>
+                                <option value='Limuru Town.'> Limuru Town.</option>
+                                <option value='Mnagei'> Mnagei</option>
+                                <option value='Makutano'> Makutano</option>
+                                <option value='Lokichar'> Lokichar</option>
+                                <option value='Mount Kenya'> Mount Kenya</option>
+                                <option value='Nanyuki - Timau'> Nanyuki - Timau</option>
+                                <option value='Archers Post'> Archers Post</option>
+                                <option value='Ruiri Town'> Ruiri Town</option>
+                                <option value='Malili'> Malili</option>
+                                <option value='Kathonzweni'> Kathonzweni</option>
+                                <option value='Kimana'> Kimana</option>
+                                <option value='Merrueshi'> Merrueshi</option>
+                                <option value='Sultan Hamud'> Sultan Hamud</option>
+                                <option value='Nkubu'> Nkubu</option>
+                                <option value='Muranga'> Muranga</option>
+                                <option value='Kutus'> Kutus</option>
+                                <option value='Gaichanjiru'> Gaichanjiru</option>
+                                <option value='Gitugi'> Gitugi</option>
+                                <option value='Kabati'> Kabati</option>
+                                <option value='Tuthu'> Tuthu</option>
+                                <option value='Kagio'> Kagio</option>
+                                <option value='Sagana'> Sagana</option>
+                                <option value='Ndakaini'> Ndakaini</option>
+                                <option value='Syokimau'> Syokimau</option>
+                                <option value='Jacaranda Kenia '> Jacaranda Kenia </option>
+                                <option value='Langata'> Langata</option>
+                                <option value='Rusinga Islands'> Rusinga Islands</option>
+                                <option value='MIrogi'> MIrogi</option>
+                                <option value='Mbita'> Mbita</option>
+                                <option value='Kendu Bay'> Kendu Bay</option>
+                                <option value='Homa Bay'> Homa Bay</option>
+                                <option value='Kagan'> Kagan</option>
+                                <option value='Homa Bay Town'> Homa Bay Town</option>
+                                <option value='Muhuru'> Muhuru</option>
+                                <option value='Nyangweso'> Nyangweso</option>
+                                <option value='Rongo'> Rongo</option>
+                                <option value='Suneka'> Suneka</option>
+                                <option value='Sare'> Sare</option>
+                                <option value='Migori'> Migori</option>
+                                <option value='Sindo'> Sindo</option>
+                                <option value='Mfangano Island'> Mfangano Island</option>
+                                <option value='Bungoma'> Bungoma</option>
+                                <option value='Malaba'> Malaba</option>
+                                <option value='Siaya'> Siaya</option>
+                                <option value='Chwele'> Chwele</option>
+                                <option value='Shianda'> Shianda</option>
+                                <option value='Mumias'> Mumias</option>
+                                <option value='Miendo'> Miendo</option>
+                                <option value='Webuye'> Webuye</option>
+                                <option value='Kisian'> Kisian</option>
+                                <option value='Gucha'> Gucha</option>
+                                <option value='Kilimani'> Kilimani</option>
+                                <option value='Batians Lane'> Batians Lane</option>
+                                <option value='Nyeri'> Nyeri</option>
+                                <option value='Kerugoya'> Kerugoya</option>
+                                <option value='Kiriani'> Kiriani</option>
+                                <option value='Kiganjo'> Kiganjo</option>
+                                <option value='Iria-Ini'> Iria-Ini</option>
+                                <option value='Karatina'> Karatina</option>
+                                <option value='Embu'> Embu</option>
+                                <option value='Kimunye'> Kimunye</option>
+                                <option value='Kibugu'> Kibugu</option>
+                                <option value='Kirinyaga District'> Kirinyaga District</option>
+                                <option value='Runyenjes Town'> Runyenjes Town</option>
+                                <option value='Runyenjes'> Runyenjes</option>
+                                <option value='Matayos'> Matayos</option>
+                                <option value='Ugunja'> Ugunja</option>
+                                <option value='Busia'> Busia</option>
+                                <option value='Funyula'> Funyula</option>
+                                <option value='Tarime'> Tarime</option>
+                                <option value='Kericho'> Kericho</option>
+                                <option value='Longisa'> Longisa</option>
+                                <option value='Usenge'> Usenge</option>
+                                <option value='Bondo'> Bondo</option>
+                                <option value='Kendu bay'> Kendu bay</option>
+                                <option value='Rusinga East'> Rusinga East</option>
+                                <option value='Asembo'> Asembo</option>
+                                <option value='Cedar Hill'> Cedar Hill</option>
+                                <option value='Kisaju'> Kisaju</option>
+                                <option value='South B'> South B</option>
+                                <option value='Hurlingham kilimani Nairobi'> Hurlingham kilimani Nairobi</option>
+                                <option value='Starehe'> Starehe</option>
+                                <option value='Muchatha'> Muchatha</option>
+                                <option value='Elgon Road'> Elgon Road</option>
+                                <option value='Kawaida'> Kawaida</option>
+                                <option value='Wangige'> Wangige</option>
+                                <option value='Athi River '> Athi River </option>
+                                <option value=' Athi River'> Athi River</option>
+                                <option value='Kenyatta Road'> Kenyatta Road</option>
+                                <option value='Isinya'> Isinya</option>
+                                <option value='Kangundo'> Kangundo</option>
+                                <option value='Nairobi '> Nairobi </option>
+                                <option value='Tuala'> Tuala</option>
+                                <option value='Mwala'> Mwala</option>
+                                <option value='NAIROBI '> NAIROBI </option>
+                                <option value=' Vipingo'> Vipingo</option>
+                                <option value='Mtwapa '> Mtwapa </option>
+                                <option value='Casuarina'> Casuarina</option>
+                                <option value='Vipingo'> Vipingo</option>
+                                <option value='Kilifi County'> Kilifi County</option>
+                                <option value='Watamu '> Watamu </option>
+                                <option value='Uyombo'> Uyombo</option>
+                                <option value='Ватаму'> Ватаму</option>
+                                <option value='Takaungu'> Takaungu</option>
+                                <option value='kilifi creek'> kilifi creek</option>
+                                <option value='Kenya'> Kenya</option>
+                                <option value='Takaungu Creek'> Takaungu Creek</option>
+                                <option value='Kilifi '> Kilifi </option>
+                                <option value='Kilifi'> Kilifi</option>
+                                <option value='Watamu '> Watamu </option>
+                                <option value='Mayungu'> Mayungu</option>
+                                <option value='NYANDARUA '> NYANDARUA </option>
+                                <option value='Aberdare Range'> Aberdare Range</option>
+
+
+                                <!-- <option value='Baragoi'>Baragoi</option>
                                     <option value='Bondo'>Bondo</option>
                                     <option value='Bungoma'>Bungoma</option>
                                     <option value='Busia'>Busia</option>
@@ -158,83 +604,47 @@
                                     <option value='Watamu'>Watamu</option>
                                     <option value='Webuye'>Webuye</option>
                                     <option value='Wote'>Wote</option>
-                                    <option value='Wundanyi'>Wundanyi</option>
-    
-                                </select>
-                            </div>
-
-                        <label for="bathroomLabel" class="col-sm-2 col-form-label">bathroomLabel:</label>
+                                    <option value='Wundanyi'>Wundanyi</option>     -->
+                            </select>
+                        </div>
+                        <label for="maxNights" class="col-sm-2 col-form-label">maxNights:</label>
                         <div class="col-sm-2 form-group ">
-                            <input type="text" id="bathroomLabel" required name="bathroomLabel" class="form-control"
+                            <input type="text" id="maxNights" required name="maxNights" class="form-control"
                                 placeholder="Enter value (int)"
                                 oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
                         </div>
 
-                        <label for="Private_entrance" class="col-sm-2 col-form-label">Private_entrance:</label>
-                        <div class="col-sm-2 form-group">
-                            <select id="Private_entrance" class="form-control" name="Private_entrance">
-                                <option value="0">YES</option>
-                                <option value="1">NO</option>
-                            </select>
+                        <label for="minNights" class="col-sm-2 col-form-label">minNights:</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="minNights" required name="minNights" class="form-control"
+                                placeholder="Enter value (int)"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+                        <label for="latitude" class="col-sm-2 col-form-label">latitude:</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="latitude"  name="latitude" class="form-control"
+                                placeholder="Enter value (float)">
+                        </div>
+                        <label for="longitude" class="col-sm-2 col-form-label">longitude:</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="longitude"  name="longitude" class="form-control"
+                                placeholder="Enter value (float)">
                         </div>
 
-                        <label for="numberOfBedsAvailable" class="col-sm-2 col-form-label">numberOfBedsAvailable:</label>
+
+                        <label for="numberOfBedsAvailable"
+                            class="col-sm-2 col-form-label">numberOfBedsAvailable:</label>
                         <div class="col-sm-2 form-group ">
                             <input type="text" id="numberOfBedsAvailable" required name="numberOfBedsAvailable"
                                 class="form-control" placeholder="Enter value (int)"
                                 oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
                         </div>
 
-
                         <label for="numberOfBedrooms" class="col-sm-2 col-form-label">numberOfBedrooms:</label>
                         <div class="col-sm-2 form-group ">
                             <input type="text" id="numberOfBedrooms" required name="numberOfBedrooms"
                                 class="form-control" placeholder="Enter value (int)"
                                 oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
-                        </div>
-                        
-                        <label for="roomType" class="col-sm-2 col-form-label">roomType:</label>
-                        <div class="col-sm-2 form-group">
-                            <select id="roomType" class="form-control" name="roomType">
-                                <option value="0">Private</option>
-                                <option value="1">Shared</option>
-                                <option value="2">Entire Home/Studio</option>
-                                <option value="3">Other</option>
-                            </select>
-                        </div>
-
-                        <label for="toddler_bed" class="col-sm-2 col-form-label">toddler_bed:</label>
-                        <div class="col-sm-2 form-group">
-                            <select id="toddler_bed" class="form-control" name="toddler_bed">
-                                <option value="0">No</option>
-                                <option value="1">Only 1</option>
-                                <option value="2">2</option>
-                            </select>
-                        </div>
-                      
-                        
-                        
-                        <label for="crib" class="col-sm-2 col-form-label">crib:</label>
-                        <div class="col-sm-2 form-group">
-                            <select id="crib" class="form-control" name="crib">
-                                <option value="0">No</option>
-                                <option value="1">Yes</option>
-                            </select>
-                        </div>
-
-                        <label for="hammock" class="col-sm-2 col-form-label">hammock:</label>
-                        <div class="col-sm-2 form-group">
-                            <select id="hammock" class="form-control" name="hammock">
-                                <option value="0">No</option>
-                                <option value="1">Yes</option>
-                            </select>
-                        </div>
-                        <label for="water_bed" class="col-sm-2 col-form-label">water_bed:</label>
-                        <div class="col-sm-2 form-group">
-                            <select id="water_bed" class="form-control" name="water_bed">
-                                <option value="0">No</option>
-                                <option value="1">Yes</option>
-                            </select>
                         </div>
 
                         <label for="allowsChildren" class="col-sm-2 col-form-label">allowsChildren:</label>
@@ -275,82 +685,65 @@
                                 <option value="1">Yes</option>
                             </select>
                         </div>
-                        
-                        <label for="personCapacity" class="col-sm-2 col-form-label">personCapacity (1 to 20):</label>
+
+                        <label for="review_count" class="col-sm-2 col-form-label">Review_Count:</label>
                         <div class="col-sm-2 form-group ">
-                            <input type="text" id="personCapacity" required name="personCapacity" class="form-control"
-                                placeholder="Enter value (int)"
-                                oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
-                        </div>
-                        
-                        <label for="Accuracy" class="col-sm-2 col-form-label">Accuracy (1 to 5):</label>
-                        <div class="col-sm-2 form-group ">
-                            <input type="text" id="Accuracy" required name="Accuracy" class="form-control"
+                            <input type="text" id="review_count" required name="review_count" class="form-control"
                                 placeholder="Enter value (float)"
                                 oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
                         </div>
-
-                        <label for="Check_in" class="col-sm-2 col-form-label">Check_in (1 to 5):</label>
-                        <div class="col-sm-2 form-group ">
-                            <input type="text" id="Check_in" required name="Check_in" class="form-control"
-                                placeholder="Enter value (float)"
-                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
-                        </div>
-
-                        <label for="Cleanliness" class="col-sm-2 col-form-label">Cleanliness (1 to 5):</label>
-                        <div class="col-sm-2 form-group ">
-                            <input type="text" id="Cleanliness" required name="Cleanliness" class="form-control"
-                                placeholder="Enter value (float)"
-                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
-                        </div>
-
-                        <label for="Communication" class="col-sm-2 col-form-label">Communication (1 to 5):</label>
-                        <div class="col-sm-2 form-group ">
-                            <input type="text" id="Communication" required name="Communication" class="form-control"
-                                placeholder="Enter value (float)"
-                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
-                        </div>
-
-                        <label for="Location" class="col-sm-2 col-form-label">Location (1 to 5):</label>
-                        <div class="col-sm-2 form-group ">
-                            <input type="text" id="Location" required name="Location" class="form-control"
-                                placeholder="Enter value (float)"
-                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
-                        </div>
-
-                        <label for="Review_Count" class="col-sm-2 col-form-label">Review_Count:</label>
-                        <div class="col-sm-2 form-group ">
-                            <input type="text" id="Review_Count" required name="Review_Count" class="form-control"
-                                placeholder="Enter value (float)"
-                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
-                        </div>
-
-                        <label for="Value" class="col-sm-2 col-form-label">Value (1 to 5):</label>
-                        <div class="col-sm-2 form-group ">
-                            <input type="text" id="Value" required name="Value" class="form-control"
-                                placeholder="Enter value (float)"
-                                oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
-                        </div>
-
                         <label for="amenities" class="col-sm-2 col-form-label">amenities:</label>
                         <div class="col-sm-2 form-group">
                             <select id="amenities" class="form-control" name="amenities">
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
                             </select>
                         </div>
 
-                        <label for="bed_type" class="col-sm-2 col-form-label">bed_type (1 to 50):</label>
+                        <label for="regular_bed" class="col-sm-2 col-form-label">regular_bed:</label>
                         <div class="col-sm-2 form-group ">
-                            <input type="text" id="bed_type" required name="bed_type" class="form-control"
+                            <input type="text" id="regular_bed" required name="regular_bed" class="form-control"
+                                placeholder="Enter value (int)"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+                        <label for="relaxing_bed" class="col-sm-2 col-form-label">relaxing_bed:</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="relaxing_bed" required name="relaxing_bed" class="form-control"
+                                placeholder="Enter value (int)"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+                        <label for="kids_bed" class="col-sm-2 col-form-label">kids_bed:</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="kids_bed" required name="kids_bed" class="form-control"
                                 placeholder="Enter value (int)"
                                 oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
                         </div>
 
+                        <label for="numberofbathroom" class="col-sm-2 col-form-label">numberofbathroom:</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="numberofbathroom" required name="numberofbathroom"
+                                class="form-control" placeholder="Enter value (int)"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
+                        <label for="bathroomType" class="col-sm-2 col-form-label">bathroomType:</label>
+                        <div class="col-sm-2 form-group">
+                            <select id="bathroomType" class="form-control" name="bathroomType">
+                                <option value="shared">Shared</option>
+                                <option value="private">Private</option>
+                                <option value="unknown">Other</option>
+                            </select>
+                        </div>
+
+
+                        <label for="roomType" class="col-sm-2 col-form-label">roomType:</label>
+                        <div class="col-sm-2 form-group">
+                            <select id="roomType" class="form-control" name="roomType">
+                                <option value="Private room">Private Room</option>
+                                <option value="Shared room">Shared Room</option>
+                                <option value="Entire unit">Entire Unit</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
 
                         <!-- 
                             <label for="age" class="col-sm-2 col-form-label">Private_entrance:</label>

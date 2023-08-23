@@ -18,34 +18,29 @@ def predict_datapoint():
     
     else:
         data=CustomData(
+            numberOfGuests=float(request.form.get('numberOfGuests')),
+            roomType=str(request.form.get('roomType')),
+            maxNights=float(request.form.get('maxNights')),
+            minNights=float(request.form.get('minNights')),
+            city=str(request.form.get('city')),
             state=str(request.form.get('state')),
-            city = str(request.form.get('city')),
-            bathroomLabel=float(request.form.get('bathroomLabel')),
-            Private_entrance = float(request.form.get('Private_entrance')),
-            numberOfBedsAvailable = float(request.form.get('numberOfBedsAvailable')),
-            numberOfBedrooms = float(request.form.get('numberOfBedrooms')),
-            roomType = float(request.form.get('roomType')),
-            
-            toddler_bed = float(request.form.get('toddler_bed')),            
-            crib = float(request.form.get('crib')),
-            hammock = float(request.form.get('hammock')),
-            water_bed = float(request.form.get('water_bed')),
-            allowsChildren = float(request.form.get('allowsChildren')),
-            allowsEvents = float(request.form.get('allowsEvents')),
-            allowsPets = float(request.form.get('allowsPets')),
-            allowsSmoking = float(request.form.get('allowsSmoking')),
-            allowsInfants = float(request.form.get('allowsInfants')),
-            personCapacity = float(request.form.get('personCapacity')),
-
-            Accuracy = float(request.form.get('Accuracy')),
-            Check_in = float(request.form.get('Check_in')),
-            Cleanliness = float(request.form.get('Cleanliness')),
-            Communication = float(request.form.get('Communication')),
-            Location = float(request.form.get('Location')),
-            Review_Count = float(request.form.get('Review_Count')),
-            Value = float(request.form.get('Value')),
-            amenities = float(request.form.get('amenities')),
-            bed_type = float(request.form.get('bed_type'))
+            latitude=float(request.form.get('latitude')),
+            longitude=float(request.form.get('longitude')),
+            price=float(request.form.get('price')),
+            numberOfBedsAvailable=float(request.form.get('numberOfBedsAvailable')),
+            numberOfBedrooms=float(request.form.get('numberOfBedrooms')),
+            allowsChildren=float(request.form.get('allowsChildren')),
+            allowsEvents=float(request.form.get('allowsEvents')),
+            allowsPets=float(request.form.get('allowsPets')),
+            allowsSmoking=float(request.form.get('allowsSmoking')),
+            allowsInfants=float(request.form.get('allowsInfants')),
+            review_count=float(request.form.get('review_count')),
+            amenities=float(request.form.get('amenities')),
+            regular_bed=float(request.form.get('regular_bed')),
+            relaxing_bed=float(request.form.get('relaxing_bed')),
+            kids_bed=float(request.form.get('kids_bed')),
+            numberofbathroom=float(request.form.get('numberofbathroom')),
+            bathroomType=str(request.form.get('bathroomType'))
         )
         
         final_new_data=data.get_data_as_dataframe()
