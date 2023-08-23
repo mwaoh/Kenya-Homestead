@@ -26,7 +26,7 @@ def predict_datapoint():
             state=str(request.form.get('state')),
             latitude=float(request.form.get('latitude')),
             longitude=float(request.form.get('longitude')),
-            price=float(request.form.get('price')),
+            
             numberOfBedsAvailable=float(request.form.get('numberOfBedsAvailable')),
             numberOfBedrooms=float(request.form.get('numberOfBedrooms')),
             allowsChildren=float(request.form.get('allowsChildren')),

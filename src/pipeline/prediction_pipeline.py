@@ -38,7 +38,6 @@ class CustomData:
                 state:str,
                 latitude:float,
                 longitude:float,
-                price:float,
                 numberOfBedsAvailable:float,
                 numberOfBedrooms:float,
                 allowsChildren:float,
@@ -59,9 +58,9 @@ class CustomData:
         self.maxNights=maxNights
         self.minNights=minNights
         self.city=city
-        self.localizedCity=localizedCity
-        self.statelatitude=statelatitude
-        self.longitudeprice=longitudeprice
+        self.state=state
+        self.latitude=latitude
+        self.longitude =longitude
         self.numberOfBedsAvailable=numberOfBedsAvailable
         self.numberOfBedrooms=numberOfBedrooms
         self.allowsChildren=allowsChildren
@@ -86,9 +85,9 @@ class CustomData:
                 'maxNights':[self.maxNights],
                 'minNights':[self.minNights],
                 'city':[self.city],
-                'localizedCity':[self.localizedCity],
-                'statelatitude':[self.statelatitude],
-                'longitudeprice':[self.longitudeprice],
+                'state':[self.state],
+                'latitude':[self.latitude],
+                'longitude':[self.longitude],
                 'numberOfBedsAvailable':[self.numberOfBedsAvailable],
                 'numberOfBedrooms':[self.numberOfBedrooms],
                 'allowsChildren':[self.allowsChildren],

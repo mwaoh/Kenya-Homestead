@@ -613,7 +613,12 @@
                                 placeholder="Enter value (int)"
                                 oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
                         </div>
-
+                        <label for="numberOfGuests" class="col-sm-2 col-form-label">numberOfGuests:</label>
+                        <div class="col-sm-2 form-group ">
+                            <input type="text" id="numberOfGuests" required name="numberOfGuests" class="form-control"
+                                placeholder="Enter value (int)"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');">
+                        </div>
                         <label for="minNights" class="col-sm-2 col-form-label">minNights:</label>
                         <div class="col-sm-2 form-group ">
                             <input type="text" id="minNights" required name="minNights" class="form-control"
