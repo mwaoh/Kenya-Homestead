@@ -26,9 +26,9 @@ class DataTransformation:
         try:
             # Define which columns should be ordinal-encoded and which should be scaled
             categorical_cols = ['roomType', 'city', 'state', 'bathroomType']
-            numerical_cols = ['numberOfGuests', 'maxNights', 'minNights', 'latitude', 'longitude', 'numberOfBedsAvailable', 'numberOfBedrooms', 'allowsChildren', 'allowsEvents', 'allowsPets', 'allowsSmoking', 'allowsInfants', 'review_count', 'amenities', 'regular_bed', 'relaxing_bed', 'kids_bed', 'numberofbathroom']
+            numerical_cols = ['numberOfGuests', 'maxNights',  'numberOfBedsAvailable', 'numberOfBedrooms', 'allowsChildren', 'allowsEvents', 'allowsPets', 'allowsSmoking', 'allowsInfants', 'review_count', 'amenities', 'regular_bed', 'relaxing_bed', 'kids_bed', 'numberofbathroom']
             logging.info('Data Transformation initiated2')
-
+            #'minNights', 'latitude', 'longitude',
             # Define the custom ranking for each ordinal variable
             #state_categories = ['Baringo','Bomet','Bungoma','Busia','Elgeyo','Mara','Embu','Garissa','Homa Bay','Isiolo','Kajiado','Kakamega','Kericho','Kiambu','Kilifi','Kirinyaga','Kisii','Kisumu','Kitui','Kwale','Laikipia','Lamu','Machakos','Makueni','Mandera','Marsabit','Meru','Migori','Mombasa','Muranga','Nairobi','Nakuru','Nandi','Narok','Nyamira','Nyandarua','Nyeri','Samburu','Siaya','Taveta','Tana','Tharaka-Nithi','Trans-Nzoia','Turkana','Uasin Gishu','Vihiga','Wajir','West Pokot']
             #city_categories = ['Baragoi','Bondo','Bungoma','Busia','Butere','Dadaab','Diani Beach','Eldoret','Emali','Embu','Garissa','Gede','Gem','Hola','Homa Bay','Isiolo','Kitui','Kibwezi','Kajiado','Kakamega','Kakuma','Kapenguria','Kericho','Keroka','Kiambu','Kilifi','Kisii','Kisumu','Kitale','Lamu','Langata','Litein','Lodwar','Lokichoggio','Londiani','Loyangalani','Machakos','Makindu','Malindi','Mandera','Maralal','Marsabit','Meru','Mombasa','Moyale','Mtwapa','Mumias','Muranga','Mutomo','Nairobi','Naivasha','Nakuru','Namanga','Nanyuki','Naro Moru','Narok','Nyahururu','Nyeri','Ruiru','Siaya','Shimoni','Takaungu','Thika','Ugunja','Vihiga','Voi','Wajir','Watamu','Webuye','Wote','Wundanyi']

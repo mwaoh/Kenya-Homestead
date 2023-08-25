@@ -21,11 +21,9 @@ def predict_datapoint():
             numberOfGuests=float(request.form.get('numberOfGuests')),
             roomType=str(request.form.get('roomType')),
             maxNights=float(request.form.get('maxNights')),
-            minNights=float(request.form.get('minNights')),
+            
             city=str(request.form.get('city')),
             state=str(request.form.get('state')),
-            latitude=float(request.form.get('latitude')),
-            longitude=float(request.form.get('longitude')),
             
             numberOfBedsAvailable=float(request.form.get('numberOfBedsAvailable')),
             numberOfBedrooms=float(request.form.get('numberOfBedrooms')),
@@ -42,7 +40,9 @@ def predict_datapoint():
             numberofbathroom=float(request.form.get('numberofbathroom')),
             bathroomType=str(request.form.get('bathroomType'))
         )
-        
+        #minNights=float(request.form.get('minNights')),#latitude=float(request.form.get('latitude')),
+        #longitude=float(request.form.get('longitude')),
+            
         final_new_data=data.get_data_as_dataframe()
         predict_pipeline=PredictPipeline()
         pred=predict_pipeline.predict(final_new_data)

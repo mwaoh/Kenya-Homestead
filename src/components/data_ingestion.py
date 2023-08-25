@@ -32,7 +32,7 @@ class DataIngestion:
             logging.info('Ingestion of Data is completed')
             
             #removing some columns that are irrelevant to the project goals:
-            df.drop(['hostId','memberSince','url','name','address','numberOfLanguages',], axis=1,inplace = True)
+            df.drop(['hostId','memberSince','url','name','address','numberOfLanguages','minNights','latitude', 'longitude'], axis=1,inplace = True)
 
             # Drop columns with more than 25% missing values
             def drop_columns(df, threshold):
