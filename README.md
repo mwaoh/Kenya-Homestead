@@ -1,5 +1,5 @@
-# omdenamodel
-Omdena-Kitengela- Urban Rental & Airbnb Pricing
+# Pricing model
+Home Pricing
 
 ### created a environment
 `conda create -p venv python==3.8`
